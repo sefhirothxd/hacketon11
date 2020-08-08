@@ -12,6 +12,7 @@ form.onsubmit = function(event) {
             <ul>
                 <li>${tarea}</li>
                 <li><button>X</button></li>
+                <li><button>Ok</button></li>
             </ul>
     `;
 

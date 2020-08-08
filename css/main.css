@@ -8,6 +8,8 @@ html {
 
 body {}
 
+form {}
+
 .main {
     margin: 0 auto;
     width: 960px;
@@ -24,3 +26,18 @@ form input {
 }
 
 form input:hover {}
+
+.container {
+    margin-top: 50px;
+}
+
+.list ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.list li {
+    margin-left: 20px;
+}
