@@ -15,11 +15,16 @@
     </header>
     <main class="main">
         <form>
-            <input type="text" id="tarea" class="tarea">
+            <input required type="text" id="tarea" class="tarea">
             <button id="btn-agregar">Agregar</button>
         </form>
         <div class="container" id="container">
-
+            <div id='container-pendientes'>
+                <h1 class='pendiente'>Actividades Pendientes</h1>
+            </div>
+            <div id='container-completas'>
+                <h1 class='completa'>Actividades Completadas</h1>
+            </div>
         </div>
     </main>
     <script src="js/main.js"></script>
