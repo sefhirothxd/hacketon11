@@ -7,15 +7,17 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Carter One', cursive;
     font-size: 16px;
+    background-color: #EBD494;
 }
 
 button {
     border-radius: 5px;
-    background-color: blue;
-    color: white;
+    background-color: #9AD2CB;
+    color: #472836;
     font-size: 13px;
+    font-weight: bold;
 }
 
 form {}
@@ -23,16 +25,22 @@ form {}
 .main {
     margin: 0 auto;
     width: 960px;
-    border: 1px solid red;
-    padding: 20px;
-    text-align: center;
 }
 
-form input {
+.main-tareas {
+    border: 2px solid #472836;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+form .tarea {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #472836;
     margin-right: 30px;
     outline: none;
+    background-color: transparent;
 }
 
 form input:hover {}
@@ -55,8 +63,12 @@ form input:hover {}
     text-decoration: line-through;
 }
 
+#btn-borrar {
+    background-color: red;
+}
+
 .completar {
-    color: red;
+    color: #472836;
     border: none;
     background-color: transparent;
     outline: none;

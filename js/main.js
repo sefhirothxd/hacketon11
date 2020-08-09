@@ -17,11 +17,12 @@ btn.onclick = function() {
                 <ul>
                     <li>${tarea}</li>
                     <li><button id="btn-borrar">Eliminar</button></li>
-                    <li><button id="btn-check">Completado</button></li>
+                    <li><button id="btn-check">Completar</button></li>
                 </ul>
         `;
         container.appendChild(article);
         let ul = article.querySelector('li');
+
 
         btnA = article.querySelectorAll('button');
 
@@ -35,6 +36,7 @@ btn.onclick = function() {
             } else if (event.target.id == 'btn-check') {
                 ul.classList.add('rayar');
                 event.target.classList.add('completar');
+                event.target.innerText = 'Completado'
                 containerC.appendChild(article);
             }
             console.log(event.target);
