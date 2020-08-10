@@ -15,20 +15,51 @@
 
     </header>
     <main class="main">
-        <div class="main-tareas">
+        <section class="main-calculadora">
+            <section class="container-calculador">
+                <h2 class="c-titulo">Calculator</h2>
+                <input type="text" class="input" id="input" disabled>
+                <div class="container-numsim">
+                    <div class="container-numeros" id="js_c-numeros">
+                        <button class="btn-cal" id="btn-7">7</button>
+                        <button class="btn-cal" id="btn-8">8</button>
+                        <button class="btn-cal" id="btn-9">9</button>
+                        <button class="btn-cal" id="btn-4">4</button>
+                        <button class="btn-cal" id="btn-5">5</button>
+                        <button class="btn-cal" id="btn-6">6</button>
+                        <button class="btn-cal" id="btn-1">1</button>
+                        <button class="btn-cal" id="btn-2">2</button>
+                        <button class="btn-cal" id="btn-3">3</button>
+                        <button class="btn-cal" id="btn-0">0</button>
+                        <button class="btn-cal" id="btn-.">.</button>
+                        <button class="btn-cal" id="btn-=">=</button>
+                    </div>
+                    <div class="container-simbolos" id="js_c-simbolo">
+                        <button class="btn-sin" id="btn-/">/</button>
+                        <button class="btn-sin" id="btn-*">*</button>
+                        <button class="btn-sin" id="btn--">-</button>
+                        <button class="btn-sin" id="btn-+">+</button>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+        <section class="main-tareas">
             <form>
+                <h2>Welcome to My Activity</h2>
                 <input required type="text" id="tarea" class="tarea">
                 <button id="btn-agregar">Agregar</button>
             </form>
             <div class="container" id="container">
                 <div id='container-pendientes'>
-                    <h1 class='pendiente'>Actividades Pendientes</h1>
+                    <h3 class='pendiente'>Actividades Pendientes</h1>
                 </div>
                 <div id='container-completas'>
-                    <h1 class='completa'>Actividades Completadas</h1>
+                    <h3 class='completa'>Actividades Completadas</h1>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <script src="js/main.js"></script>
 </body>

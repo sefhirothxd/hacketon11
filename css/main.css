@@ -24,15 +24,85 @@ form {}
 
 .main {
     margin: 0 auto;
-    width: 960px;
+    max-width: 960px;
+}
+
+.main-calculadora {
+    border: 2px solid #472836;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.container-calculador {
+    display: flex;
+    justify-content: center;
+    border: 2px solid #472836;
+    width: 36%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.c-titulo {
+    align-items: center;
+}
+
+.input {
+    width: 85%;
+    background: transparent;
+    outline: none;
+    border: 3px solid black;
+    text-align: right;
+    padding: 20px 10px;
+}
+
+.container-numsim {
+    display: flex;
+    margin-right: 5px;
+}
+
+.container-numeros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 75%;
+}
+
+.container-simbolos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-cal {
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.btn-sin {
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #2D8DD6;
 }
 
 .main-tareas {
     border: 2px solid #472836;
+    width: 100%;
     text-align: center;
     padding: 20px;
+    padding-bottom: 50px;
     margin-top: 20px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 40px;
 }
 
 form .tarea {
