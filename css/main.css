@@ -18,6 +18,12 @@ button {
     color: #472836;
     font-size: 13px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: black;
+    opacity: 0.7;
 }
 
 form {}
@@ -40,31 +46,34 @@ form {}
 .container-calculador {
     display: flex;
     justify-content: center;
-    border: 2px solid #472836;
-    width: 36%;
+    border: 2px solid white;
+    width: 30%;
     flex-wrap: wrap;
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    background-color: black;
 }
 
 .c-titulo {
     align-items: center;
+    color: white;
 }
 
 .input {
-    width: 85%;
+    width: 80%;
     background: transparent;
     outline: none;
-    border: 3px solid black;
+    border: 3px solid white;
     text-align: right;
-    padding: 20px 10px;
+    padding: 20px 10px 10px 0px;
+    color: white;
 }
 
 .container-numsim {
     display: flex;
-    margin-right: 5px;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 30px;
 }
 
 .container-numeros {
@@ -72,7 +81,7 @@ form {}
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 20px;
-    width: 75%;
+    width: 63%;
 }
 
 .container-simbolos {
@@ -80,18 +89,27 @@ form {}
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 8px;
+    width: 20%;
+}
+
+#btn-ac {
+    background-color: red;
 }
 
 .btn-cal {
-    padding: 20px;
+    padding: 15px;
     margin-left: 10px;
     margin-top: 10px;
+    background-color: #D2D2D2;
 }
 
 .btn-sin {
-    padding: 20px;
+    padding: 15px;
     margin-top: 10px;
-    background-color: #2D8DD6;
+    background-color: orange;
+    color: #472836;
 }
 
 .main-tareas {

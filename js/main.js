@@ -7,48 +7,50 @@ let valor2 = 0;
 let btn = form.querySelector('button');
 
 btn.onclick = function() {
-    form.onsubmit = function(event) {
-        event.preventDefault();
-        let tarea = this.querySelector('.tarea').value;
-        console.log(tarea);
-        let article = document.createElement('article');
-        console.log(article);
-        article.classList.add('list');
-        article.innerHTML = `
+        form.onsubmit = function(event) {
+            event.preventDefault();
+            let tarea = this.querySelector('.tarea').value;
+            console.log(tarea);
+            let article = document.createElement('article');
+            console.log(article);
+            article.classList.add('list');
+            article.innerHTML = `
                 <ul>
                     <li>${tarea}</li>
                     <li><button id="btn-borrar">Eliminar</button></li>
                     <li><button id="btn-check">Completar</button></li>
                 </ul>
         `;
-        container.appendChild(article);
-        let ul = article.querySelector('li');
+            container.appendChild(article);
+            let ul = article.querySelector('li');
 
 
-        btnA = article.querySelectorAll('button');
+            btnA = article.querySelectorAll('button');
 
-        btnA.forEach(btn => {
-            btn.addEventListener('click', EventButton);
-        });
+            btnA.forEach(btn => {
+                btn.addEventListener('click', EventButton);
+            });
 
-        function EventButton(event) {
-            if (event.target.id == 'btn-borrar') {
-                this.closest('.list').remove();
-            } else if (event.target.id == 'btn-check') {
-                ul.classList.add('rayar');
-                event.target.classList.add('completar');
-                event.target.innerText = 'Completado'
-                containerC.appendChild(article);
+            function EventButton(event) {
+                if (event.target.id == 'btn-borrar') {
+                    this.closest('.list').remove();
+                } else if (event.target.id == 'btn-check') {
+                    ul.classList.add('rayar');
+                    event.target.classList.add('completar');
+                    event.target.innerText = 'Completado'
+                    containerC.appendChild(article);
+                }
+                console.log(event.target);
             }
-            console.log(event.target);
+
         }
-
     }
-}
+    /*-----------------------Fin----------------------------------------------------*/
 
+/*------------------------Calculadora------------------------------------------- */
 
-/*Calculadora */
 let input = document.getElementById('input');
+input.value = 0;
 let conNum = document.getElementById('js_c-numeros')
 let consim = document.getElementById('js_c-simbolo')
 let btnNum = conNum.querySelectorAll('button')
@@ -62,7 +64,7 @@ btnSim.forEach(btnS => {
 })
 
 
-input.value = 0;
+
 
 
 function EventoBoton(event) {
@@ -137,20 +139,97 @@ function EventoBoton(event) {
         }
     }
     if (event.target.id == 'btn-/') {
-        input.value += "/";
+        valor1 = input.value;
+        let valortext = valor1.toString();
+        let acc = 0;
+        if (input.value == 0) {
+            input.value = 0;
+        } else if (valortext.charAt(valortext.length - 1) !== '/' && valortext.charAt(valortext.length - 1) !== '*' && valortext.charAt(valortext.length - 1) !== '+' && valortext.charAt(valortext.length - 1) !== '-') {
+            for (let index = 0; index < valortext.length; index++) {
+                const element = valortext[index];
+                if (element === '/' || element === '*' || element === '-' || element === '+') {
+                    acc++;
+                    console.log(acc);
+                }
+            }
+            if (acc > 0) {
+                input.value = valor1;
+            } else {
+                input.value += "/";
+            }
+        }
     }
     if (event.target.id == 'btn-*') {
-        input.value += "*";
+        valor1 = input.value;
+        let acc = 0;
+        let valortext = valor1.toString();
+        if (input.value == 0) {
+            input.value = 0;
+        } else if (valortext.charAt(valortext.length - 1) !== '/' && valortext.charAt(valortext.length - 1) !== '*' && valortext.charAt(valortext.length - 1) !== '+' && valortext.charAt(valortext.length - 1) !== '-') {
+            for (let index = 0; index < valortext.length; index++) {
+                const element = valortext[index];
+                if (element === '/' || element === '*' || element === '-' || element === '+') {
+                    acc++;
+                    console.log(acc);
+                }
+            }
+            if (acc > 0) {
+                input.value = valor1;
+            } else {
+                input.value += "*";
+            }
+        }
     }
     if (event.target.id == 'btn--') {
-        input.value += "-";
+        valor1 = input.value;
+        let acc = 0;
+        let valortext = valor1.toString();
+        if (input.value == 0) {
+            input.value = 0;
+        } else if (valortext.charAt(valortext.length - 1) !== '/' && valortext.charAt(valortext.length - 1) !== '*' && valortext.charAt(valortext.length - 1) !== '+' && valortext.charAt(valortext.length - 1) !== '-') {
+            for (let index = 0; index < valortext.length; index++) {
+                const element = valortext[index];
+                if (element === '/' || element === '*' || element === '-' || element === '+') {
+                    acc++;
+                    console.log(acc);
+                }
+            }
+            if (acc > 0) {
+                input.value = valor1;
+            } else {
+                input.value += "-";
+            }
+        }
     }
     if (event.target.id == 'btn-+') {
-        input.value += "+";
+        valor1 = input.value;
+        let acc = 0;
+        let valortext = valor1.toString();
+        if (input.value == 0) {
+            input.value = 0;
+        } else if (valortext.charAt(valortext.length - 1) !== '/' && valortext.charAt(valortext.length - 1) !== '*' && valortext.charAt(valortext.length - 1) !== '+' && valortext.charAt(valortext.length - 1) !== '-') {
+            for (let index = 0; index < valortext.length; index++) {
+                const element = valortext[index];
+                if (element === '/' || element === '*' || element === '-' || element === '+') {
+                    acc++;
+                    console.log(acc);
+                }
+            }
+            if (acc > 0) {
+                input.value = valor1;
+            } else {
+                input.value += "+";
+            }
+        }
     }
     if (event.target.id == 'btn-=') {
         valor1 = input.value
         input.value = resultado(valor1);
+
+
+    }
+    if (event.target.id == 'btn-ac') {
+        input.value = 0;
     }
 
     function resultado(valor1) {
@@ -158,26 +237,5 @@ function EventoBoton(event) {
     }
 
 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// // btnT.onclick = function() {
-// //     btnT.classList.toggle('btn-t');
-// // }
-
-// article.querySelector('button').onclick = function() {
-//         this.closest('.list').remove();
-//     }
-//     // article.querySelector('button').onclick = function() {
-//     //     this.classList.toggle('is-active');
-//     // }
